@@ -1,0 +1,395 @@
+// VARIBLES
+
+// Basic
+$accent-color: #1b3264;
+$text-color: rgba(255,255,255,.4);
+$font-basic: 'Roboto', sans-serif;
+$font-alt: 'Poppins', sans-serif;
+
+// Headings
+$headings-color: #fff;
+$headings-shadow: 3px 3px 0 rgba(0,0,0,.2);
+
+// Sections
+$section-spacing: 4rem;
+$section-separator: 1px solid #394c73;
+
+// Pricing
+$pricing-bg: rgba(255,255,255,.05);
+$pricing-hover-bg: #3163cf;
+$pricing-border: 15px;
+
+// Form
+$label-font: .75rem $font-basic;
+$form-bg: #2f4981;
+$form-border: 1.25rem;
+$button-bg: #ecae06;
+
+// Footer
+$footer-background: rgba(0,0,0,.15);
+$footer-spacing: 4rem;
+
+// Layers
+$slogan-size: 2rem;
+$welcome-height: 100vh;
+$layer-1-bg: url('../img/slider_layer1.png');
+$layer-2-bg: url('../img/slider_layer2.png');
+$layer-3-bg: url('../img/slider_layer3.png');
+$layer-4-bg: url('../img/slider_layer4.png');
+$layer-5-bg: url('../img/slider_layer5.png');
+$layer-6-bg: url('../img/slider_layer6.png');
+$layer-7-bg: url('../img/slider_layer7.png');
+
+
+// CONTENT
+
+// Basic
+body {
+  background-color: $accent-color;
+  font-family: $font-basic;
+  color: $text-color;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $headings-color;
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: $headings-shadow;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+// Layout
+.row {
+  display: flex;
+  justify-content: center;
+  background-color: $accent-color;
+  padding: $section-spacing 0;
+  border-bottom: $section-separator;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  & .column {
+    padding: 0 1rem;
+  }
+}
+
+// Welcome Section
+#welcome {
+  position: relative;
+  overflow: hidden;
+  height: $welcome-height;
+}
+
+#slogan {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $welcome-height;
+  flex-direction: column;
+  z-index: -2;
+  
+  & h1 {
+    font-size: $slogan-size;
+    text-shadow: 5px 5px 0 rgba(0,0,0,.2);
+    margin-bottom: 0px;
+  }
+}
+
+.layer {
+	background-position: bottom center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: $welcome-height;
+	position: fixed;
+	z-index: -3;
+}
+
+.layer-1 {
+  background-image: $layer-1-bg;
+  background-position: center center;
+  animation-name: flyDown;
+  animation-duration: 5s;
+}
+
+.layer-2 {
+  background-image: $layer-2-bg;
+  animation-name: flyDown;
+  animation-duration: 1.5s;
+}
+
+.layer-3 {
+  background-image: $layer-3-bg;
+  animation-name: flyDown;
+  animation-duration: 6s;
+}
+
+.layer-4 {
+  background-image: $layer-4-bg;
+  animation-name: flyDown;
+  animation-duration: 8s;
+}
+
+.layer-5 {
+  background-image: $layer-5-bg;
+  background-position: top center;
+  animation-name: flyUp;
+  animation-duration: 2s;
+}
+
+.layer-6 {
+  background-image: $layer-6-bg;
+  z-index: -1;
+}
+
+.layer-7 {
+  background-image: $layer-7-bg;
+  background-position: top center;
+  animation-name: flyUp;
+  animation-duration: 1s;
+}
+
+// Pricing
+.pricing {
+  background-color: $pricing-bg;
+  text-align: center;
+  flex: 1 1 0;
+  margin: 2rem;
+  transition: all .2s linear;
+  border-radius: $pricing-border;
+  padding: 2rem 0;
+  min-width: 400px;
+
+  &:hover {
+    background-color: $pricing-hover-bg;
+  }
+
+  .currency {
+    font-size: 1.5rem;
+    vertical-align: top;
+    margin-right: .2rem;
+  }
+
+  .time {
+    font-size: .75rem;
+  }
+
+  & ul {
+    width: 100%;
+    padding: 0;
+
+    & li {
+      list-style-type: none;
+      padding: 1rem;
+      border-top: 1px solid rgba(255,255,255,.1);
+
+      &:last-of-type {
+        border-bottom: 1px solid rgba(255,255,255,.1);
+      }
+    }
+  }
+}
+
+// Features
+.feature {
+  text-align: center;
+  padding: 0rem 2rem 0rem 2rem;
+}
+
+// Contact Form 
+label {
+  display: block;
+}
+
+textarea,
+input {
+  background-color: $form-bg;
+  border-radius: $form-border;
+  width: 100%;
+  border: none;
+  padding: .5rem 1rem;
+  transition: all .2s linear;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: lighten($form-bg, 5);
+  }
+}
+
+label {
+  font: $label-font;
+  padding: .75rem .75rem .5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+
+button {
+  font: $label-font;
+  border-radius: $form-border;
+  padding: .75rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+  border: none;
+  transition: all .2s linear;
+
+  &.yellow {
+    background-color: $button-bg;
+
+    &:hover {
+      background-color: darken($button-bg, 5);
+    }
+  }
+
+  &.blue {
+    background-color: rgba(255,255,255,.1);
+
+    &:hover {
+      ackground-color: rgba(255,255,255,1);
+    }
+  }
+}
+
+
+// Footer
+#footer {
+  display: flex;
+  justify-content: center;
+  background-color: $footer-background;
+  padding: $footer-spacing 0;
+}
+
+// Others
+.fluid-image {
+  width: 100%;
+  height: auto;
+}
+
+.double-size {
+  font-size: 2rem;
+}
+
+.triple-size {
+  font-size: 2.5rem;
+}
+
+.smaller-margin {
+  margin: 2rem 0 1.25rem 0;
+}
+
+.vertical-center {
+  align-items: center;
+}
+
+.subtitle {
+  font-family: $font-basic;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: $text-color;
+  font-size: .85rem;
+  letter-spacing: 1px;
+}
+
+.fluid-image {
+  width: 100%;
+  height: auto;
+}
+
+.mobile-reverse {
+  flex-direction: column-reverse;
+}
+
+*:focus {
+    outline: none;
+}
+
+.margin-top {
+  margin-top: .75rem
+}
+
+.margin-bottom {
+  margin-bottom: 2rem
+}
+
+.margin-right {
+  margin-right: .75rem
+}
+
+// MEDIA QUERIES
+
+// Large Screens
+@media all and (min-width: 1170px) {
+  .container {
+    width: 1070px;
+
+    & .column {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+    }
+  }
+  
+  #slogan h1 {
+    font-size: $slogan-size*2.5;
+  }
+}
+
+// Medium Screens
+@media all and (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    align-self: center;
+    width: 1070px;
+  }
+  
+  #slogan h1 {
+    font-size: $slogan-size*2;
+  }
+  
+  .row {
+    padding: $section-spacing*2 0;
+  }
+
+  .double-size {
+    font-size: 3.5rem;
+  }
+
+  .triple-size {
+    font-size: 4rem;
+  }
+
+  .pricing {
+    min-width: 0px;
+  }
+}
+
+
+// ANIMATIONS
+@keyframes flyUp {
+  0%   {bottom: -100px; opacity: 0}
+  100% {bottom: 0px; opacity: 1}
+}
+
+@keyframes flyDown {
+  0%   {bottom: 100px; opacity: 0}
+  100% {bottom: 0px; opacity: 1}
+}

@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Daniel Zawadzki -- Frontend Developer & UI/UX Designer -- @danzawadzki
+
+# THANKS
+
+    Patryk Zabielski - https://medium.com/@PatrykZabielski/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, Javascript, SASS, Photoshop
+    Apache Server Configs, Normalize.css

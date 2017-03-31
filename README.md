@@ -17,3 +17,13 @@ Sass (http://sass-lang.com/)
 
 ### Tutorials:
 How to make Multi-Layered Parallax Illustration with CSS & Javascript (https://medium.com/@PatrykZabielski/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27#.cnlc77ewv)
+
+
+## Social profiles:
+Portfolio: [danielzawadzki.com](http://danielzawadzki.com/)
+
+Twitter: [@danzawadzki9](https://twitter.com/danzawadzki7)
+
+Codepen: [@danzawadzki](https://codepen.io/danzawadzki/)
+
+Linkedin: [@danzawadzki](https://www.linkedin.com/in/danzawadzki/)
